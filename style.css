@@ -1,0 +1,391 @@
+@import "tailwindcss";
+
+:root {
+    --gray: #212121;
+    --green: #2ba86c;
+    --white: #e9e9e9;
+    --black: #0c0c0c;
+}
+
+@font-face {
+    font-family: majorcss;
+    src: url(./Manrope-VariableFont_wght.woff2);
+}
+
+@font-face {
+    font-family: minorcss;
+    src: url(./NeueMachina-Regular.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: majorcss;
+    
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: var(--black);
+    color: var(--white);
+}
+
+#green {
+    color: var(--green);
+}
+
+#gray {
+    color: rgb(153, 143, 143);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: minorcss;
+    /* 
+     * This CSS rule sets the padding for an element.
+     * Padding is the space between the element's content and its border.
+     * The value "10px 20px" applies 10 pixels of padding to the top and bottom,
+     * and 20 pixels to the left and right of the element.
+     * This creates a uniform vertical padding and wider horizontal padding.
+     */
+    padding: 20px 0px 20px 20px;
+    font-size: medium;
+}
+
+#nav1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-family: minorcss;
+}
+
+#nav1 img {
+    height: 80px;
+}
+
+#nav1 h6 {
+    font-size: 20px;
+    width: 40px;
+}
+
+#nav h5 {
+    display: none;
+}
+
+#nav2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+#search {
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: inherit;
+    border-radius: 20px;
+    width: 90px;
+    padding: 5px 10px;
+}
+
+@media (max-width:600px) {
+
+    #nav2 h4,
+    #search {
+        display: none;
+    }
+
+    #nav2 h5 {
+        display: block;
+        font-size: 25px;
+    }
+
+    /* #nav2 h4{
+        max-height: ;
+    } */
+}
+
+@media (max-width:840px) {
+    #nav1 h6 {
+        font-size: 13px;
+    }
+
+    #svg {
+        font-size: 17px;
+    }
+
+    #nav2 {
+        gap: 0.5rem;
+    }
+
+    #nav2 h4 {
+        font-size: 12px;
+    }
+}
+
+#section1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px 30px;
+    font-family: majorcss;
+}
+
+#section1 #left {
+    width: 42%;
+}
+
+#section1 #left h1 {
+    font-size: 40px;
+}
+
+#section1 #left #tags {
+    display: flex;
+    align-items: center;
+    gap: 5px 5px;
+    margin: 30px 0px;
+    flex-wrap: wrap;
+}
+
+#section1 #left #tags h4 {
+    background-color: var(--gray);
+    padding: 10px 20px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+#section1 #left #price #gray {
+    font-size: 15px;
+}
+
+#price {
+    font-size: 40px;
+    font-weight: 900;
+}
+#price #onroadprice{
+    font-size: 14px;
+    color: rgb(207, 198, 198);
+}
+#buybtndiv {
+    gap: 15px;
+    display: flex;
+    font-size: 20px;
+    text-wrap: nowrap;
+}
+
+#buybtn {
+    padding: 10px 20px;
+    background-color: var(--green);
+    border-radius: 6px;
+    margin: 10px 0px;
+    font-weight: 700;
+}
+
+#syllabusbtn {
+    padding: 10px 20px;
+    background-color: var(--gray);
+    border-radius: 6px;
+    margin: 10px 0px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+#section1 #right #right-in {
+    /* width: 100%; */
+    max-width: 48.8vw;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#section1 #right #right-in #image {
+    width: 100%;
+    height: 25vw;
+    /* max-height: 45vh; */
+}
+
+#section1 #right #right-in #image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#section1 #right #right-in #image-bottom {
+    padding: 20px;
+    padding-top: 40px;
+    background: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+#right-in #image-bottom h4 {
+    background-color: rgb(19, 18, 18);
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 45%;
+}
+
+#right-in #image-bottom h4 span {
+    color: var(--green);
+    /* white-space: nowrap; */
+}
+
+@media (max-width:1200px) {
+    #section1 #left h1 {
+        font-size: 3.5vw;
+    }
+    #section1{ 
+        padding: 15px 30px; 
+    }
+    /* #section1 #right #right-in { 
+        max-width: 48.8vw; 
+    }    */
+    #section1 #right #right-in #image { 
+        height: 25vw; 
+    }
+    #section1 #price{
+        font-size: 3.3vw;
+    }
+    #section1 #right #right-in #image-bottom {
+        padding: 29px;
+        font-size: 1.2vmax;
+    }
+}
+
+@media (max-width:800px) {
+    main{
+        padding-top:40px ;
+    }
+    #section1 {
+        flex-direction: column-reverse;
+        padding: 15px 5vw;
+    }
+
+    #section1 #left {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    #section1 #left h1 {
+        font-size: 33px;
+    }
+
+    #section1 #right #right-in {
+        max-width: 77.8vw;
+        overflow: hidden;
+
+    }
+
+    #section1 #right #right-in #image  {
+        width: 100%;
+        height: 100%;
+    }
+
+    #section1 #right #right-in #image-bottom {
+        /* max-width: 77.8vw; */
+        /* overflow: hidden; */
+        padding: 21px;
+        gap: 9px;
+    }
+    #section1 #right #right-in #image-bottom h4 {
+        font-size: 13px;
+        padding: 3px 8px;
+        gap: 9px;
+        width: 100%;
+    } 
+}
+
+@media (max-width:700px) {
+    #section1 #left h1 {
+        font-size: 4.6vw;
+    }
+    #section1 #price{
+        font-size: 22px;
+    }
+    #section1 #right #right-in #image-bottom {
+        padding: 21px;
+        gap: 9px;
+    }
+}
+@media (max-width:600px) {
+    #section1 #right #right-in #image-bottom {
+        padding: 18px;
+        gap: 9px;
+    }
+}
+
+@media (max-width:500px) {
+    #nav #nav1 h6{
+        font-size: 15px;
+    }
+    #section1 {
+        padding: 34px 34px;
+    }
+    #section1 #left h1 {
+        font-size: 20px;
+    }
+    #section1 #left h2 {
+        font-size: 15   px;
+    }
+
+    #section #right #right-in {
+        padding: 0;
+    }
+
+    #section1 #right #right-in #image-bottom {
+        padding: 6px 10px;
+        margin: 0;
+        /* font-size: 11px; */
+        gap: 7px;
+    }
+}
+#section2{
+    margin: 20px ;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#section2 h1{
+    font-family: Microsoft Sans Serif;
+    font-size: 90px;
+    position: relative;
+    font-weight: bolder;
+    background-image: url(/bg.jpg);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+}
+#section2 #bloom{
+    position: absolute;
+    filter: blur(50px);
+}
+#section2 h3{
+    font-size: 35px ;
+    text-transform: capitalize;
+    letter-spacing: -1px;
+}
+@media (max-width:1300px) {
+    #section2 h1{
+        font-size: 6.9vw;
+    }
+    #section2 h3{
+        font-size: 2.7vw;
+    }
+}

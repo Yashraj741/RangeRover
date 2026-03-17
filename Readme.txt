@@ -1,0 +1,1 @@
+This project is only made using html css and tailwindcss
